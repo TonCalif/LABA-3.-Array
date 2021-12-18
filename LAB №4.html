@@ -1,0 +1,56 @@
+</html>
+<meta charset="utf-8">
+<script>
+    let user1 = {
+      name: "Джон",
+      age: 30
+    };
+    user1.sayHi = function() {
+      alert("Привет!");
+    };
+    user1.sayHi(); 
+
+    let user2 = {
+        name: "Иван ",
+        lastname: "Иванов ",
+        age: "18 лет ",
+        sex: 'Мужской ',
+        status: 'Студент ',
+    }
+    alert(user2.name + user2.lastname + user2.age + user2.status)
+    
+    let users = {
+        name: ['Михаил', 'Никита', 'Андрей', 'Тимофей'],
+    }
+    let orders = {
+        numberoforder: [12, 101, 1212, 312]
+    }
+    let restoraunts = {
+        nameofrestoraunt: [1, 2, 3, 4]
+    }
+    alert("В ресторане " + restoraunts.nameofrestoraunt[1] + " готов заказ " + orders.numberoforder[1] + " для " + users.name[1])
+    
+    function User(name) {
+      this.name = name;
+      this.isAdmin = false
+    }
+
+    let user = new User("Кирилл");
+
+    alert(user.name); 
+    alert(user.isAdmin); 
+
+    function User(name) {
+      this.name = name;
+      this.isAdmin = false
+
+      this.sayHi = function() {
+        alert( "Мое имя: " + this.name );
+      };
+    }
+
+    let kirill = new User("Кирилл");
+
+    kirill.sayHi();
+
+</script>
